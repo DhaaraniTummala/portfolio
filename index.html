@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dhaarani Tummala</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+        body{
+            background-image: "";
+        }
+       .nav {
+            display: flex;
+        }
+
+        .show {
+            font-family: var(--twk-everett);
+            font-weight: 800;
+            margin-left: 200px;
+          
+            font-size: 30px;
+            margin-top: 23px;
+        }
+
+      
+     .careers {
+            color: rgb(84, 84, 82);
+            text-decoration: none;
+            margin-left: 505px;
+            font-size: 22px;
+            font-family: var(--twk-everett);
+        }
+
+        .button1 {
+            background-color: black;
+            color: white;
+            margin-left: 70px;
+            height: 50px;
+            width: 130px;
+            border-radius: 25px;
+            margin-right: 0px;
+        }
+
+        .button2 {
+            background-color: black;
+            color: white;
+            height: 50px;
+            width: 50px;
+            border-radius: 25px;
+            margin-left: 0px;
+        }
+
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 100%;
+        }
+
+        .left-part {
+            background-color: #f1f1f1;
+            padding: 20px;
+            position: relative; 
+        }
+
+        .scroll {
+            position: absolute;
+            top: 200px;
+            width: 100%;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .m-scroll {
+            display: flex;
+            white-space: nowrap;
+            animation: scrollText 10s infinite linear;
+        }
+
+        .m-scroll h1 {
+            margin: 0;
+            margin-right: 150px;
+            font-size: 100px;
+            color: black;
+            transition: all 10s ease;
+        }
+
+        @keyframes scrollText {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        .leftp {
+            font-size: 30px;
+            max-width: 500px;
+            font-family: var(--twk-everett);
+            margin-left: 100px;
+            color: rgb(111, 105, 105);
+            margin-top: 450px;
+            line-height: 1.5;
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            z-index: 1; 
+        }
+
+        .video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        .pbutton{
+            border: none;
+            margin-left: 90px;
+            text-decoration: underline;
+            line-height: 3;
+        }
+
+        .para{
+            font-size: 55px;
+            margin-left: 60px;
+            font-family: var(--twk-everett);
+            color: grey;
+        }
+
+        .first{
+            height: 60px;
+            border-radius: 3px;
+            background-color: white;
+            border-radius: 25px;
+            width: 160px;
+            font-size: 20px;
+        }
+
+        
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+.headings{
+    font-size: 30px;
+    margin-left: 20px;
+    text-shadow: 3px 3px 3px grey;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.matter{
+    font-size: 25px;
+    margin-left: 10px;
+}
+footer{
+    height:100px;
+    background-color: black;
+    width: 2000px;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+<script>
+    $(document).ready(function () {
+        $(document).on('mousemove', function (e) {
+            $('.circularcursor').css({
+                left: e.pageX,
+                top: e.pageY
+            });
+        })
+    });
+</script>
+<div class="nav">
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">About</a>
+        <a href="#">Education</a>
+        <a href="#">Skills</a>
+        <a href="#">Certification</a>
+        <a href="#">Summary of Bootcamp</a>
+       
+      </div>
+      
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">☰ </button>  
+           </div>
+    <p class="show">Dhaarani Tummala</p>
+  
+    <div style="margin-top: 20px;">
+        <a class="work" href="#work"></a>
+        <a class="careers" href="#careers">Share website</a>
+        <button class="button1">Contact</button>
+        <button class="button2">&#8599;</button>
+       
+    </div>
+</div>
+<div class="container">
+    <div class="left-part">
+        <div class="scroll">
+            <div class="m-scroll">
+                <div>
+                    <h1>
+                        <span>Hey! I am Dhaarani Tummala  &#x2726;    </span><span>
+                </div>
+            </div>
+        </div>
+        <p class="leftp">Welcome! I am a 2nd year CS student. I am a very easy going person. I like to take on challenges even though I end up embarassing myself but it's a way to grow. I am not a big "plan everything and do everything by schedule" kind off person. It works for me so, it's fine.</p>
+        <button class="pbutton"></button>
+    </div>
+    <div class="video-container">
+        <video class="video" autoplay muted loop>
+            <source src="video (1).mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+      </script>
+     
+<div>
+    <h3 id="main" class="headings">
+        Education
+    </h3>
+    <p class="matter">
+        <h3 class="matter">Under Graduation</h3>
+               <p class="matter">Sridevi Women's Engineering College(2022-2026)<br> Current CGPA: 8.43</p>
+             <h3 class="matter">Intermediate</h3>
+               <p class="matter">Deeksha Junior College(2020-2022)<br>secured 95%</p>
+              <h3 class="matter">School</h3>
+               <p class="matter">Vikas the concept School(2020)<br>secured 93%</p>
+               
+    </p>
+</div><br>
+<div>
+    <h3 class="headings">
+        Skills
+    </h3>
+    <div class="matter">
+    <p>Organisational skills</p>
+    <p>Team management</p>
+    <p>Adaptability</p>
+    <p>Fairly consider myself to be good at logical reasoning</p>
+</div>
+</div>
+<br>
+<div>
+    <h3 class="headings">
+        Certifications
+    </h3>
+    <div class="matter">
+    <p>Artificial Intelligence and Machine Learnign from IIT Hyderabad, sangareddy.</p>
+    <p>Data structures and algorithms with Python - NPTEL</p>
+</div>
+</div>
+<br>
+<div>
+    <h3 class="headings">
+        Summary of Bootcamp
+    </h3>
+    <div class="matter">
+    <p>Learned to install an OS and create very own OS.</p>
+    <p>Learned about Automatic Speech Recognition</p>
+    <p>Front end development</p>
+</div>
+</div><br><br><br>
+<footer>
+    <p style="margin: 10px 600px;">&#9993; dhaaranitummala@gmail.com</p>
+    <p style="margin: 10px 645px;">Copyright</p>
+</footer>
+</body>
+</html>
